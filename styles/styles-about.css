@@ -1,0 +1,183 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Anton&family=BBH+Sans+Bogle&display=swap');
+
+body.body {
+    margin: 0;
+    font-family: 'Arial', sans-serif;
+    background-color: #000;
+}
+
+/* ======= NAVEGACIÓN ======= */
+.header {
+    background: #0b0f19e6;
+    backdrop-filter: blur(10px);
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 100;
+    display: flex;
+    justify-content: space-between;
+    padding: 0.8rem 0;
+}
+
+.logo {
+    width: 48px;
+    margin: 8px 0 5px 20px;
+    filter: drop-shadow(1px 1px 0 #fff) ;
+}
+
+.nav {
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    padding: 1rem 0;
+    margin-right: 2rem;
+}
+
+.nav-link {
+    color: #f1f1f1;
+    text-decoration: none;
+    font-weight: 500;
+    transition: color 0.3s;
+}
+
+.nav-link:hover {
+    color: #ffa101;
+    transform: scale(1.2);
+}
+
+
+.cv-page {
+    border: 1px solid #fff;
+    width: 794px;
+    height: 1123px;
+    margin: 100px auto 30px auto;
+    display: flex;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+    background-color: white;
+    overflow: hidden;
+}
+
+.left-panel {
+    width: 45%;
+    background-color: #000;
+    color: white;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+}
+
+.image-wrapper {
+    position: relative;
+    height: 300px;
+    overflow: hidden;
+}
+
+.profile-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    clip-path: polygon(0 0, 100% 0, 100% calc(100% - 40px), 0 100%);
+}
+
+.black-section {
+    padding: 40px;
+    flex-grow: 1;
+}
+
+.black-section .section-title {
+    color: #fff;
+    font-family: "BBH Sans Bogle", sans-serif;
+    font-weight: 100;
+    margin-top: 20px;
+    font-size: 1.5em;
+}
+
+.black-section .contact-link {
+    color: #fff;
+    text-decoration: none;
+    display: block;
+    margin-top: 8px;
+}
+
+.black-section .skills-list {
+    padding-left: 20px;
+}
+
+.black-section .skill-item {
+    margin-top: 5px;
+}
+
+.languages-section .language,
+.courses-section .course {
+    margin-top: 5px;
+}
+
+.right-panel {
+    width: 65%;
+    display: flex;
+    flex-direction: column;
+}
+
+.yellow-header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: #DBF121;
+    height: 20%;
+    color: #000;
+}
+
+.yellow-header .name-title {
+    margin: 0;
+    font-size: 3em;
+    font-family: sans-serif;
+}
+
+.yellow-header .job-title {
+    margin-top: 10px;
+    font-weight: normal;
+}
+
+.gray-content {
+    background-color: #EAEAEA;
+    padding: 30px;
+    flex-grow: 1;
+}
+
+.gray-content .section-title {
+    color: #000;
+    margin-top: 30px;
+    font-family: "BBH Sans Bogle", sans-serif;
+    font-weight: 300;
+    font-size: 1.5em;
+}
+
+.gray-content .section-title::after {
+    content: "";
+    display: block;
+    height: 1px;
+    background-color: #000;
+    margin-top: 8px;
+    margin-bottom: 20px;
+}
+
+.gray-content .job-title-detail {
+    margin-top: 20px;
+    font-weight: bold;
+}
+
+.gray-content .experience-list,
+.gray-content .education-list {
+    padding-left: 20px;
+}
+
+.gray-content .experience-item,
+.gray-content .education-item {
+    margin-top: 5px;
+}
+
+.gray-content .profile-text {
+    margin-top: 10px;
+}

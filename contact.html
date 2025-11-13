@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/styles/styles.css">
+    <title>Contacto</title>
+</head>
+
+<body>
+
+    <!-- Navegación -->
+    <header class="header">
+        <img src="img/freepik_br_af3c3195-1e40-403a-8a93-2d9983ed1292.png" alt="logo Benjamin Dalmau" class="logo">
+        <nav class="nav container">
+            <a href="index.html " class="nav-link">Inicio</a>
+            <a href="contact.html" class="nav-link">Contactame</a>
+            <a href="about.html" class="nav-link">Mi Curriculum</a>
+        </nav>
+    </header>
+
+    <!-- formulario -->
+    <main id="contact-us">
+
+        <h1 id="titulo-contacto">¿Necesitas una página web?</h1>
+        <h2 id="subtitulo-contacto">Comunicate conmigo</h2>
+        <div id="container-form">
+            <form id="formSubmit">
+                <label for="name">Ingresa tu nombre</label>
+                <input type="text" name="name" placeholder="Juan Perez" required>
+                <label for="telefono">Ingresa tu telefono</label>
+                <input type="number" name="telefono" placeholder="12345678" required>
+                <label for="mail">Ingresa tu correo</label>
+                <input type="email" id placeholder="juanperez@mail.com" required>
+                <label for="solicitud">Contame como ayudarte</label>
+                <textarea name="solicitud" id="solicitud" placeholder="Necesito una landing page para un Ecommerce de un restaurante..." required></textarea>
+                <button id="enviar-form" type="submit">ENVIAR SOLICITUD</button>
+            </form>
+        </div>
+    </main>
+
+    <script src="scripts/script.js"></script>
+</body>
+
+</html>

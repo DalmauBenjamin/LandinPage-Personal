@@ -1,0 +1,565 @@
+@import url('https://fonts.googleapis.com/css2?family=Baloo+2:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Anton&family=BBH+Sans+Bogle&family=Bruno+Ace+SC&display=swap');
+
+/* ======= RESET ======= */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+}
+
+body {
+    background-color: #0b0f19;
+    color: #f1f1f1;
+    overflow-x: hidden;
+    scroll-behavior: smooth;
+}
+
+
+/* =============================== */
+/*======= ESTILOS LANDING =======*/
+/* =============================== */
+
+/* ======= CONTENEDORES ======= */
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* ======= NAVEGACIÓN ======= */
+.header {
+    background: #0b0f19e6;
+    backdrop-filter: blur(10px);
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 10000;
+    display: flex;
+    align-items: center;
+}
+
+.logo {
+    width: 48px;
+    margin: 8px 0 5px 20px;
+    filter: drop-shadow(1px 1px 0 #fff);
+}
+
+.nav {
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    padding: 1rem 0;
+}
+
+.nav-link {
+    color: #f1f1f1;
+    text-decoration: none;
+    font-weight: 500;
+    transition: color 0.3s;
+}
+
+.nav-link:hover {
+    color: #ffa101;
+    transform: scale(1.2);
+}
+
+/* ======= HERO ======= */
+.hero {
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    background: linear-gradient(to bottom, #151b2d, #0b0f19);
+    padding: 0 1rem;
+
+}
+
+.hero-content {
+    max-width: 800px;
+}
+
+.hero-name {
+    font-family: 'Baloo 2', cursive;
+    font-size: 6rem;
+    font-weight: 700;
+    color: #ffa101;
+    letter-spacing: 2px;
+    animation: fadeInUp 1s ease forwards;
+    opacity: 0;
+    text-shadow: 2px 2px 4px #fff9;
+}
+
+.hero-name span {
+    color: #333;
+    font-family: 'Baloo 2', cursive;
+    text-shadow: 2px 2px 4px #fff9;
+}
+
+.hero-title {
+    font-size: 2rem;
+    font-family: "Bruno Ace SC", sans-serif;
+    color: #fff;
+    margin-top: 0.5rem;
+    animation: fadeInUp 1.5s ease forwards;
+    opacity: 0;
+}
+
+@keyframes fadeInUp {
+    0% {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.hero-subtitle {
+    margin-top: 1rem;
+    font-size: 1.2rem;
+    color: #cfcfcf;
+}
+
+/* ======= SECCIONES ======= */
+.section-title {
+    font-family: "Bruno Ace SC", sans-serif;
+    text-align: center;
+    font-size: 2rem;
+    margin-bottom: 2rem;
+    color: #ffa101;
+}
+
+section {
+    background-color: #0b0f19;
+}
+
+
+/* ======= SOBRE MÍ ======= */
+.about-section {
+    padding: 5rem 0;
+    width: 80%;
+    margin: 0 auto;
+    background: #0b0f19;
+}
+
+.container-about {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.img-about {
+    width: 30%;
+    border-radius: 20px;
+}
+
+.about-text {
+    font-size: 20px;
+    color: #ccc;
+    line-height: 1.6;
+    margin-bottom: 1rem;
+    margin-left: 1rem;
+}
+
+/* ======= CARRUSEL ======= */
+.projects-section {
+    margin: 5rem 0;
+    position: relative;
+    background: #0b0f19;
+    overflow: hidden;
+}
+
+.projects-carousel {
+    position: relative;
+    width: 100%;
+    margin: 0 auto;
+    overflow: hidden;
+    padding: 3rem 0;
+    display: flex;
+    justify-content: center;
+}
+
+.carousel-track {
+    display: flex;
+    gap: 2rem;
+    transition: transform 0.6s ease-in-out;
+    align-items: center;
+    height: 400px;
+}
+
+.project-card {
+    background-color: #151b2d;
+    border-radius: 15px;
+    flex: 0 0 380px;
+    text-align: left;
+    overflow: hidden;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5);
+    transform: scale(1);
+    opacity: 0.7;
+    transition: transform 200ms ease;
+}
+
+.project-card.active {
+    transform: scale(1);
+    opacity: 1;
+    box-shadow: 0 8px 25px rgba(108, 99, 255, 0.4);
+}
+
+.project-card img {
+    width: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+.project-card h4 {
+    color: #ffa101;
+    font-size: 1.2rem;
+    margin: 1rem 0 0.3rem 1rem;
+}
+
+.project-card p {
+    color: #ccc;
+    font-size: 0.95rem;
+    margin: 0 1rem 1rem 1rem;
+}
+
+
+.link-proyecto {
+    display: none;
+}
+
+.project-card:hover {
+    transform: scale(1.3);
+    opacity: 1;
+    z-index: 1000;
+}
+
+.project-card:hover .link-proyecto {
+    display: inline-block;
+    font-size: 0.95rem;
+    margin: 1rem;
+    font-weight: bold;
+}
+
+.link-proyecto a {
+    color: #6C63FF;
+}
+
+.bi-github {
+    color: #6C63FF;
+}
+
+/* ======= SERVICIOS ======= */
+.services-container {
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    flex-wrap: wrap;
+}
+
+.service-card {
+    background: #151b2d;
+    border-radius: 15px;
+    padding: 2rem;
+    width: 300px;
+    text-align: center;
+    transition: transform 0.3s, box-shadow 0.3s;
+    opacity: 0.6;
+}
+
+.service-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 8px 20px rgba(108, 99, 255, 0.25);
+}
+
+.service-title {
+    color: #6C63FF;
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+}
+
+.service-desc {
+    color: #ccc;
+    font-size: 1rem;
+}
+
+/* ======= TECNOLOGÍAS ======= */
+.tech-section {
+    padding: 5rem 0;
+    text-align: center;
+    background: #0b0f19;
+}
+
+.tech-container {
+    background: #151b2d;
+    padding: 2rem;
+    border-radius: 20px;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 2rem;
+    width: 80%;
+    margin: 0 auto;
+}
+
+.tech-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.tech-img-container {
+    width: 64px;
+    height: 64px;
+    border-radius: 50%;
+    background: #0b0f19;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 4px 10px rgba(108, 99, 255, 0.3);
+    transition: transform 0.3s;
+}
+
+.tech-img-container:hover {
+    transform: scale(1.2);
+}
+
+.tech-item img {
+    width: 60%;
+    height: auto;
+    object-fit: contain;
+}
+
+/* ======= LINEA DEL TIEMPO ======= */
+.timeline-section {
+    padding: 60px 20px;
+    text-align: center;
+}
+
+.timeline-container {
+    position: relative;
+    width: 100%;
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 40px 0;
+}
+
+/* Línea central */
+.timeline-container::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 3px;
+    height: 100%;
+    background-color: #3498db;
+}
+
+/* Items */
+.timeline-item {
+    position: relative;
+    width: 50%;
+    padding: 20px 40px;
+    box-sizing: border-box;
+}
+
+/* Alternar lados */
+.timeline-item:nth-child(odd) {
+    left: 0;
+    text-align: right;
+}
+
+.timeline-item:nth-child(even) {
+    left: 50%;
+    text-align: left;
+}
+
+/* Conectores */
+.timeline-item::before {
+    content: '';
+    position: absolute;
+    top: 25px;
+    width: 18px;
+    height: 18px;
+    background-color: #3498db;
+    border-radius: 50%;
+    z-index: 1;
+}
+
+.timeline-item:nth-child(odd)::before {
+    right: -9px;
+}
+
+.timeline-item:nth-child(even)::before {
+    left: -9px;
+}
+
+.timeline-date {
+    font-weight: bold;
+    margin-bottom: 5px;
+    color: #3498db;
+}
+
+.timeline-content {
+    padding: 15px;
+    border-radius: 8px;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+    display: inline-block;
+    max-width: 100%;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.timeline-item:hover {
+    transform: translateY(-5px);
+    text-shadow: 0 5px 15px rgba(108, 99, 255, 0.2);
+}
+
+.timeline-content h4 {
+    margin: 0 0 5px 0;
+    font-size: 1.1rem;
+}
+
+.timeline-content p {
+    margin: 0;
+    color: #888;
+}
+
+
+/* ======= FOOTER ======= */
+.footer {
+    text-align: center;
+    padding: 2rem 0;
+    background: #0b0f19;
+    border-top: 1px solid #1e2333;
+    color: #777;
+    font-size: 0.9rem;
+}
+
+/* ======= RESPONSIVE ======= */
+@media (max-width: 900px) {
+    .hero-name {
+        font-size: 3rem;
+    }
+
+    .hero-title {
+        font-size: 1.5rem;
+    }
+
+    .projects-carousel {
+        padding: 2rem 0;
+    }
+
+    .project-card {
+        width: 300px;
+    }
+
+    .services-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .tech-container {
+        width: 90%;
+    }
+}
+
+
+
+
+/* =============================== */
+/*======= ESTILOS CONTACTO =======*/
+/* =============================== */
+
+/* Formulario */
+#contact-us {
+    margin: auto;
+    margin-top: 100px;
+    width: 75%;
+}
+
+#titulo-contacto {
+    font-family: "Bruno Ace SC", sans-serif;
+    margin: auto;
+    text-align: center;
+    color: #ffa101;
+}
+
+#subtitulo-contacto {
+    margin: 25px auto 15px auto;
+    text-align: center;
+}
+
+#container-form {
+    margin: auto ;
+    background: #151b2d;
+    box-shadow: 0 0 10px 4px #6c63ff1f;
+    width: 600px;
+    border-radius: 20px;
+    border: 1px solid #2a365c;
+}
+
+#formSubmit {
+    width: 90%;
+    display: flex;
+    flex-direction: column;
+    margin: auto;
+}
+
+#formSubmit label {
+    color: #ffa101;
+    margin: 20px 0 5px 0;
+    font-size: 1.rem;
+}
+
+#formSubmit input {
+    border: none;
+    background-color: #0b0f19;
+    color: #fff;
+    height: 40px;
+    border-radius: 10px;
+    padding: 10px;
+    transition: transform 0.3s;
+}
+
+#formSubmit input:focus {
+    outline: 1px solid #6c63ff1f;
+    transform: scale(1.02);
+}
+
+#formSubmit textarea {
+    border: none;
+    background-color: #0b0f19;
+    color: #fff;
+    height: 120px;
+    border-radius: 10px;
+    padding: 10px;
+    transition: transform 0.3s;
+}
+
+#formSubmit textarea:focus {
+    outline: 1px solid #6c63ff1f;
+    transform: scale(1.03);
+}
+
+#enviar-form {
+    margin: 25px 0;
+    background-color: #ffa101;
+    border: none;
+    border-radius: 10px;
+    height: 40px;
+    font-weight: bolder;
+    color: #111;
+    transition: transform 0.1s;
+}
+
+#enviar-form:hover{
+    transform: scale(1.05);
+    font-size: 1rem;
+}
