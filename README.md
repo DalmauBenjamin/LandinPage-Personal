@@ -55,7 +55,7 @@ root
 
 ## 📄 Licencia
 
-Este proyecto se encuentra bajo la licencia MIT.
+Este proyecto se encuentra bajo la licencia CC0 1.0 Universal.
 Podés utilizarlo, modificarlo y adaptarlo como desees.
 
 ---
